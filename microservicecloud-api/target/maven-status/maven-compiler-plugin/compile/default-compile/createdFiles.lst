@@ -1,2 +1,4 @@
-org\dzq\springcloud\service\DeptClientService.class
 org\dzq\springcloud\pojo\Dept.class
+org\dzq\springcloud\service\DeptClientService.class
+org\dzq\springcloud\service\DeptClientServiceFallbackFactory.class
+org\dzq\springcloud\service\DeptClientServiceFallbackFactory$1.class

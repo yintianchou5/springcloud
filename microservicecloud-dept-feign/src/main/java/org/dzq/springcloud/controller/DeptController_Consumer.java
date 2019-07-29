@@ -19,11 +19,11 @@ public class DeptController_Consumer {
 	}
 	@RequestMapping(value="/consumer/dept/get/{id}")
 	public Dept get(@PathVariable("id") Long id) {
-		return this.get(id);
+		return this.deptClientService.get(id);
 	}
 	@RequestMapping(value="/consumer/dept/list")
 	public List<Dept> list() {
-		return this.list();
+		return this.deptClientService.list();
 	}
 	
 }

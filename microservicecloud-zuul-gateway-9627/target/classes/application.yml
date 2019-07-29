@@ -1,0 +1,38 @@
+ #配置服务器信息
+server:
+  port: 9527
+
+
+#数据库信息配置
+spring:
+  application:
+    name: microservicecloud-zuul-gateway  #应用名称
+
+
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true  #可以在eureka看到ip地址
+    
+    
+info: 
+  app.name: dzq-microservicecloud
+  company.name: www.dzq.com
+  build.artifactId: microservicecloud-zuul-gateway-9627
+  build.version: 0.0.1-SNAPSHOT
+  
+  
+zuul: 
+  prefix: /dzq    #加前缀
+  ignored-services: microservicecloud-dept   # "*"  可以将所有的微服务名称全部关闭
+  routes: 
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**    #相当于给microservicecloud-dept取别名mydept
+  
+  
+  
+  
